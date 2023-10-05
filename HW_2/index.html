@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</head>
+<div>
+    <div id="prod">
+    </div>
+</div>
+<script>
+    let prodInf = document.querySelector('#prod');
+    initialData.forEach(elem => {
+        let blk = prodInf.appendChild(document.createElement('div'));
+        let prodInfo = blk.appendChild(document.createElement('h2'));
+        prodInfo.textContent = elem.product;
+        //let prod = blk.appendChild(document.createElement('div'));
+
+
+        let input = blk.appendChild(document.createElement('input'));
+        let btn = blk.appendChild(document.createElement('button'));
+        btn.textContent = "Оставить отзыв";
+
+        input.setAttribute('prod', elem.product);
+        for (rev of elem.reviews) {
+            let prodRev = blk.appendChild(document.createElement('p'));
+            prodRev.textContent = rev.text;
+        }
+
+        btn.onclick = (elem) => {
+            let prodRev = blk.appendChild(document.createElement('p'));
+            if (input.value.length >= 50 & input.value.length <= 500) {
+                prodRev.textContent = input.value;
+            } else throw new Error("Отзыв не может быть короче 50 или больше 500 символов.")
+        };
+    });
+
+</script>
+
+<body>
+
+</body>
+
+</html>
