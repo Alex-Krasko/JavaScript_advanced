@@ -55,6 +55,8 @@ dish.set("Калифорния", cookers.get("Суши"));
 dish.set("Тирамису", cookers.get("Десерты"));
 dish.set("Чизкейк", cookers.get("Десерты"));
 
+
+let id = Symbol("id");
 let clients = {
     alex: "Алексей",
     maria: "Мария",
@@ -68,5 +70,3 @@ orders.set(Symbol(clients.alex), "Тирамису");
 orders.set(Symbol(clients.maria), "Калифорния");
 orders.set(Symbol(clients.maria), "Маргарита");
 orders.set(Symbol(clients.irina), "Чизкейк");
-
-console.log(orders);
