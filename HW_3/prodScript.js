@@ -30,7 +30,7 @@ for (let i = 0; i < localStorage.length; i++) {
 data.forEach(el => {
     let div = blk.appendChild(document.createElement('div'))
     let hEl = div.appendChild(document.createElement('h2'));
-    dat = el.info.split(',');
+    let dat = el.info.split(',');
 
     for (i = 0; i < dat.length; i++) {
         let dvBlk = div.appendChild(document.createElement('div'));

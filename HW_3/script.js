@@ -55,7 +55,6 @@ btn.onclick = () => {
             data.push({ key: key, info: value });
             localStorage.setItem(key, value);
         }
-
         // console.log(data);
         // console.log(data.length);
 
